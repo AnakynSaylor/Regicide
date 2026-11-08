@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://b8a2hp6ijsxli"]
+
+[ext_resource type="Script" uid="uid://1aalyg74vk8m" path="res://cards/scripts/eight_readme.gd" id="1_huvy7"]
+[ext_resource type="Texture2D" uid="uid://dttmj0dxkppw3" path="res://assets/Clubs/club_0008.png" id="2_2vouo"]
+[ext_resource type="Texture2D" uid="uid://vsrj7dc10lhx" path="res://assets/Diamonds/diamond_0008.png" id="3_nhme2"]
+[ext_resource type="Texture2D" uid="uid://boha167a30y03" path="res://assets/Hearts/heart_0008.png" id="4_e5l2n"]
+[ext_resource type="Texture2D" uid="uid://sq13t1oeoci7" path="res://assets/Spades/spade_0008.png" id="5_2wgl0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ckl2"]
+atlas = ExtResource("2_2vouo")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ckl2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_514of"]
+atlas = ExtResource("3_nhme2")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_514of")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4dlb"]
+atlas = ExtResource("4_e5l2n")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4dlb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kko7v"]
+atlas = ExtResource("5_2wgl0")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d0u6y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kko7v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Eights" type="Node2D" unique_id=2082232177]
+script = ExtResource("1_huvy7")
+
+[node name="Clubs" type="AnimatedSprite2D" parent="." unique_id=1338534494]
+position = Vector2(30, 37)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+
+[node name="Diamonds" type="AnimatedSprite2D" parent="." unique_id=879209310]
+position = Vector2(81, 37)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+
+[node name="Hearts" type="AnimatedSprite2D" parent="." unique_id=1541693389]
+position = Vector2(30, 103)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_57qmd")
+
+[node name="Spades" type="AnimatedSprite2D" parent="." unique_id=2027893494]
+position = Vector2(81, 103)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_d0u6y")

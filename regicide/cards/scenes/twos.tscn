@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://drf1odbtga1gc"]
+
+[ext_resource type="Script" uid="uid://cq7p4de55i3us" path="res://cards/scripts/two_readme.gd" id="1_lej4b"]
+[ext_resource type="Texture2D" uid="uid://qif6366ynxsl" path="res://assets/Clubs/club_0002.png" id="2_lc3x0"]
+[ext_resource type="Texture2D" uid="uid://buy3sa7n7kda1" path="res://assets/Diamonds/diamond_0002.png" id="3_r65gh"]
+[ext_resource type="Texture2D" uid="uid://bc4w246smjjh6" path="res://assets/Hearts/heart_0002.png" id="4_r65gh"]
+[ext_resource type="Texture2D" uid="uid://riyjohj4v7kt" path="res://assets/Spades/spade_0002.png" id="5_ceb3y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceb3y"]
+atlas = ExtResource("2_lc3x0")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aki2p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ceb3y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22cn2"]
+atlas = ExtResource("3_r65gh")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1ijc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22cn2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shldr"]
+atlas = ExtResource("4_r65gh")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lc3x0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shldr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqhjm"]
+atlas = ExtResource("5_ceb3y")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r65gh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqhjm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Twos" type="Node2D" unique_id=1986140660]
+script = ExtResource("1_lej4b")
+
+[node name="Clubs" type="AnimatedSprite2D" parent="." unique_id=1497031400]
+position = Vector2(30, 42)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_aki2p")
+
+[node name="Diamonds" type="AnimatedSprite2D" parent="." unique_id=1390897036]
+position = Vector2(83, 42)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_s1ijc")
+
+[node name="Hearts" type="AnimatedSprite2D" parent="." unique_id=1227250417]
+position = Vector2(30, 109)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_lc3x0")
+
+[node name="Spades" type="AnimatedSprite2D" parent="." unique_id=478150328]
+position = Vector2(83, 110)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_r65gh")
