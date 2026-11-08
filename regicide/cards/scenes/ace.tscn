@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dbg750yxdm1os"]
+
+[ext_resource type="SpriteFrames" path="res://assets/Clubs/club_0001.pngteFrames_g4v7s" id="1_plh3x"]
+[ext_resource type="Texture2D" uid="uid://bd5h1x6dovnn8" path="res://assets/Diamonds/diamond_0001.png" id="2_mt1qg"]
+[ext_resource type="Texture2D" uid="uid://ppd6her5fcln" path="res://assets/Hearts/heart_0001.png" id="3_ngev8"]
+[ext_resource type="Texture2D" uid="uid://dkbd66dxph27v" path="res://assets/Spades/spade_0001.png" id="4_0xqxo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f01m2"]
+atlas = ExtResource("2_mt1qg")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f01m2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6otn"]
+atlas = ExtResource("3_ngev8")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6otn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egbmn"]
+atlas = ExtResource("4_0xqxo")
+region = Rect2(0, 0, 96, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egbmn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ace" type="Node2D" unique_id=21090845]
+
+[node name="Clubs" type="AnimatedSprite2D" parent="." unique_id=1993414806]
+position = Vector2(3, 3.9999998)
+scale = Vector2(0.05, 0.05)
+sprite_frames = ExtResource("1_plh3x")
+
+[node name="Diamonds" type="AnimatedSprite2D" parent="." unique_id=1362249730]
+position = Vector2(7.9999995, 3.9999998)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+
+[node name="Hearts" type="AnimatedSprite2D" parent="." unique_id=1477692936]
+position = Vector2(2.9999998, 10.999999)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+
+[node name="Spades" type="AnimatedSprite2D" parent="." unique_id=2066842996]
+position = Vector2(7.9999995, 10.999999)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_57qmd")
