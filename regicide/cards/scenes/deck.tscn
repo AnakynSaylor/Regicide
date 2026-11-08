@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c8txqlvx3kjip"]
+
+[ext_resource type="Script" uid="uid://u7dollyusnu2" path="res://cards/scripts/deck_readme.gd" id="1_6rx7s"]
+[ext_resource type="PackedScene" uid="uid://dbg750yxdm1os" path="res://cards/scenes/aces.tscn" id="2_bst3d"]
+[ext_resource type="PackedScene" uid="uid://drf1odbtga1gc" path="res://cards/scenes/twos.tscn" id="3_1dfii"]
+[ext_resource type="PackedScene" uid="uid://cm6inj0psrhxy" path="res://cards/scenes/threes.tscn" id="4_xb40k"]
+[ext_resource type="PackedScene" uid="uid://b5kt37oohhkht" path="res://cards/scenes/fours.tscn" id="5_lt28c"]
+[ext_resource type="PackedScene" uid="uid://nxoght6jbcjg" path="res://cards/scenes/fives.tscn" id="6_fv5sh"]
+[ext_resource type="PackedScene" uid="uid://df5o8a80ntwkh" path="res://cards/scenes/sixs.tscn" id="7_yydq0"]
+[ext_resource type="PackedScene" uid="uid://cgfwhqyxco3yh" path="res://cards/scenes/sevens.tscn" id="8_gw0wt"]
+[ext_resource type="PackedScene" uid="uid://b8a2hp6ijsxli" path="res://cards/scenes/eights.tscn" id="9_rofuh"]
+[ext_resource type="PackedScene" uid="uid://dobrt46tpp1k0" path="res://cards/scenes/tens.tscn" id="10_2xst3"]
+[ext_resource type="PackedScene" uid="uid://ddjhysnrji857" path="res://cards/scenes/jacks.tscn" id="11_k78ho"]
+[ext_resource type="PackedScene" uid="uid://8hyfahlfcrx1" path="res://cards/scenes/queens.tscn" id="12_aqdvw"]
+[ext_resource type="PackedScene" uid="uid://biq8o56snm1ao" path="res://cards/scenes/kings.tscn" id="13_6btic"]
+
+[node name="Deck" type="Node2D" unique_id=1049714309]
+script = ExtResource("1_6rx7s")
+
+[node name="Cards" type="Node2D" parent="." unique_id=1288336710]
+visible = false
+
+[node name="Aces" parent="Cards" unique_id=21090845 instance=ExtResource("2_bst3d")]
+
+[node name="Twos" parent="Cards" unique_id=1986140660 instance=ExtResource("3_1dfii")]
+
+[node name="Threes" parent="Cards" unique_id=1572014755 instance=ExtResource("4_xb40k")]
+
+[node name="Fours" parent="Cards" unique_id=971438400 instance=ExtResource("5_lt28c")]
+
+[node name="Fives" parent="Cards" unique_id=773138171 instance=ExtResource("6_fv5sh")]
+
+[node name="Sixs" parent="Cards" unique_id=2123510138 instance=ExtResource("7_yydq0")]
+
+[node name="Sevens" parent="Cards" unique_id=891578447 instance=ExtResource("8_gw0wt")]
+
+[node name="Eights" parent="Cards" unique_id=2082232177 instance=ExtResource("9_rofuh")]
+
+[node name="Tens" parent="Cards" unique_id=1652197608 instance=ExtResource("10_2xst3")]
+
+[node name="Jacks" parent="Cards" unique_id=1080768096 instance=ExtResource("11_k78ho")]
+
+[node name="Queens" parent="Cards" unique_id=1664294979 instance=ExtResource("12_aqdvw")]
+
+[node name="Kings" parent="Cards" unique_id=172805623 instance=ExtResource("13_6btic")]
+
+[editable path="Cards/Aces"]
+[editable path="Cards/Twos"]
+[editable path="Cards/Threes"]
+[editable path="Cards/Fours"]
+[editable path="Cards/Fives"]
+[editable path="Cards/Sixs"]
+[editable path="Cards/Sevens"]
+[editable path="Cards/Eights"]
+[editable path="Cards/Tens"]
+[editable path="Cards/Jacks"]
+[editable path="Cards/Queens"]
+[editable path="Cards/Kings"]
