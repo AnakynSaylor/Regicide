@@ -20,10 +20,8 @@ func init_deck():
 	deck.resize(DECKSIZE);
 	for i in cards.get_children(): ## this will loop through the nodes in Cards
 		for j in i.get_children(): ## this will get the children of each of those nodes
-			print(i.name + " " + j.name); 
-			deck.append(j);
+			deck.push_back(j);
 	deck = scramble(deck);
-	print("\n");
 	return deck;
 
 ## takes in a deck of cards and moves each card at each index to a random index
@@ -66,5 +64,5 @@ func print_deck(deck):
 		if(i != null):
 			var child_name = i.name;
 			var parent_name = i.get_parent().name;
-			print(parent_name + " " + child_name);
+			print(child_name + " of " + parent_name);
 			

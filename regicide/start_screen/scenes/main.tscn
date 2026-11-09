@@ -1,23 +1,30 @@
 [gd_scene format=3 uid="uid://bkd475c2n3hbu"]
 
-[ext_resource type="Script" uid="uid://cj76jnmknm4e3" path="res://start_screen/scripts/main.gd" id="1_cbxkx"]
-[ext_resource type="PackedScene" uid="uid://c8txqlvx3kjip" path="res://cards/scenes/deck.tscn" id="3_8ldkr"]
+[ext_resource type="PackedScene" uid="uid://cn0krdg8vt7bb" path="res://cards/scenes/deck.tscn" id="3_8ldkr"]
+
+[sub_resource type="GDScript" id="GDScript_cbxkx"]
+script/source = "extends Node2D
+
+@onready var deck = $Deck;
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var new_deck = deck.init_deck();
+	deck.print_deck(new_deck);
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
 
 [node name="Main" type="Node2D" unique_id=1220261557]
-script = ExtResource("1_cbxkx")
+script = SubResource("GDScript_cbxkx")
 
 [node name="Deck" parent="." unique_id=1049714309 instance=ExtResource("3_8ldkr")]
 
 [editable path="Deck"]
-[editable path="Deck/Cards/Aces"]
-[editable path="Deck/Cards/Twos"]
-[editable path="Deck/Cards/Threes"]
-[editable path="Deck/Cards/Fours"]
-[editable path="Deck/Cards/Fives"]
-[editable path="Deck/Cards/Sixs"]
-[editable path="Deck/Cards/Sevens"]
-[editable path="Deck/Cards/Eights"]
-[editable path="Deck/Cards/Tens"]
-[editable path="Deck/Cards/Jacks"]
-[editable path="Deck/Cards/Queens"]
-[editable path="Deck/Cards/Kings"]
+[editable path="Deck/Cards/Clubs"]
+[editable path="Deck/Cards/Diamonds"]
+[editable path="Deck/Cards/Hearts"]
+[editable path="Deck/Cards/Spades"]
